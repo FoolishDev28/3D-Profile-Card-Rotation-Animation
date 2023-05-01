@@ -1,0 +1,95 @@
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 90vh;
+	background: #1c2a44;
+}
+.card{
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	position: relative;
+	background: white;
+	box-shadow: 0px 5px 9px 1px skyblue;
+	cursor: pointer;
+}
+.image-box,.content-box{
+	width: 100%;
+	height: 100%;
+	transition: all 0.45s linear;
+}
+img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+.content-box{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: white;
+	border-radius: 50%;
+	transform: translate3d(0, -160px, -220px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+}
+.content-box1{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: white;
+	border-radius: 50%;
+	transform: translate3d(0, -150px, -220px) rotate3d(1, 0, 0, 90deg);
+    transform-origin: center;
+    opacity: 0;
+}
+.card:hover .content-box{
+	transform: translate3d(0px, 0px, 0px) rotate3d(0, 0, 0,0);
+	opacity: 1;
+}
+.card:hover .image-box{
+	transform: translate3d(0px, 150px, 220px)rotate3d(1, 0, 1,-90deg);
+	opacity: 0;
+}
+.content-box{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	font-size: 25px;
+	gap: 15px;
+}
+a{
+  height: 50px;
+  width: 50px;
+  box-shadow:0px 4px 8px lightblue;
+  border-radius: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; 
+  font-size: 25px;
+  margin: auto;
+}
+.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+span a{
+	margin: 3%;
+}
+.fa-instagram{
+  color: #ea3145;
+}
+.fa-codepen{
+  color: #27ae60;
+}
+a:active{
+  box-shadow: inset 0px 5px 14px 4px red; 
+}
+
+
